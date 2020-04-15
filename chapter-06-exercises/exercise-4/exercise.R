@@ -6,9 +6,9 @@
 # Hint: compare the length difference to the length of the smaller string
 is_twice_as_long <- function(str1, str2) {
     answer <- "either string is not greater or equal to twice the length of the other"
-    if (nchar(stmt1) >= 2 * nchar(stmt2)) {
+    if (nchar(str1) >= 2 * nchar(str2)) {
         answer <- "one string is greater or equal to twice the length of the other"
-    } if (2 * nchar(stmt1) <= nchar(stmt2)) {
+    } else if (2 * nchar(str1) <= nchar(str2)) {
         answer <- "one string is greater or equal to twice the length of the other"
     }
     return(answer)
@@ -31,7 +31,7 @@ describe_difference <- function(str1, str2) {
     diff <- abs(nchar(str1) - nchar(str2))
     if(nchar(str1) > nchar(str2)) {
         answer <- paste("Your first string is longer by", diff, "characters")
-    } if(nchar(str1) < nchar(str2)) {
+    } else if(nchar(str1) < nchar(str2)) {
         answer <- paste("Your second string is longer by", diff, "characters")
     } else {
         answer <- "Your strings are the same length!"
